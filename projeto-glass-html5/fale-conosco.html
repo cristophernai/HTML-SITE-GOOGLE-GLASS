@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre Google Glass</title>
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/form.css">
+</head>
+<script src="_javascript/funcoes.js"></script>
+    <body>
+        <div id="interface">
+                <header id="cabecalho">
+                    <hgroup>            
+                    <h1>Google Glass</h1>
+                    <h2>A revolução do Google está chegando</h2>
+                    </hgroup>            
+                    <img id="icon" src="_imagens/contato.png" alt="">
+                    <nav id="menu">                
+                        <h1> Menu Principal</h1>
+                        <ul>
+                            <li onmouseover="mudFoto('_imagens/glass-oculos-preto-peq.png')" onmouseout="mudFoto('_imagens/contato.png')"><a href="index.html"> Home </a></li>
+                            <li onmousemove="mudFoto('_imagens/especificacoes.png')" onmouseout="mudFoto('_imagens/contato.png')"><a href="specs.html"> Especificações </a></li>
+                            <li onmouseover="mudFoto('_imagens/fotos.png')" onmouseout="mudFoto('_imagens/contato.png')"><a href="fotos.html"> Fotos </a></li>
+                            <li onmouseover="mudFoto('_imagens/multimidia.png')" onmouseout="mudFoto('_imagens/contato.png')"><a href="multimidia.html"> Multimídia </a></li>                    
+                            <li onmouseover="mudFoto('_imagens/contato.png')" onmouseout="mudFoto('_imagens/contato.png')"><a href="fale-conosco.html"> Fale Conosco </a></li>
+                        </ol>
+                    </nav>
+                </header>
+                <form method="post" id="fContato" action="mailto:cristopherruotolo@gmail.com" oninput="calc_total();">
+                    <fieldset id="id"> 
+                        <legend> Identificação do Usuário</legend> 
+                            <p><label for="cnome"> Nome:</label> <input type="text" name="tnome" id="cnome" size="20" maxlength="30" placeholder="Nome Completo"></p>
+                            <p><label for="csenha"> Senha:</label><input type="password" name="tsenha" id="csenha" size="20" maxlength="8" placeholder="8 Caracteres"></p>
+                            <p><label for="cmail"> E-mail:</label> <input type="email" name="tmail" id="cmail" size="20" maxlength="40" placeholder="Digite seu E-Mail"></p>
+                            <fieldset id="sexo"> <legend> Sexo:</legend>
+                                <input type="radio" name="tsexo" id="cmasc"><label for="cmasc" >Masculino</label>
+                                <input type="radio" name="tsexo" id="cfem"><label for="cfem" > Feminino</label>
+                            </fieldset>
+                            <p>Data de Nascimento: <input type="date" name="tdate" id="cdate"></p>
+                        </fieldset>
+                        <fieldset  id="end">
+                        <legend>Endereço do Usuário</legend> 
+                            <p><label for="clog"> Logradouro: </label><input type="text" name="tlog" id="clog" size="20" placeholder="Rua, Av, Trav"></p>
+                            <p><label for="cnmr"> Número: </label><input type="text" name="tnmr" id="cnmr" size="20" placeholder="Numero da Residência" min="0" max="10000"></p>
+                            <p><label for="cestado"> Estado: </label><select name="testado" id="cestado">                                
+                                <optgroup label="Regiao Sudeste">
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="MG">Minas Gerais</option>
+                            </optgroup>
+                            <optgroup label="Regiao Sul">
+                                <option value="PR">Parana</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                            </optgroup>
+                            </select></p>
+                            <p><label for="ccid"> Cidade: </label><input type="text" name="tcid" id="ccid" size="20" placeholder="Cidade" list="city"></p>
+                            <datalist id="city">
+                                <option value="Rio de Janeiro"></option>
+                                <option value="Nova Iguacu"></option>
+                                <option value="Niteroi"></option>
+                                <option value="Belford Roxo"></option>
+                            </datalist>
+                        </fieldset>
+                        <fieldset id="mensagem">
+                        <legend> Mensagem do Usuário</legend> 
+                            <p><label for="curg">Grau de Urgência: </label>
+                            Min<input type="range" name="turg" id="curg" min="0" max="10" step="2">Max </p>
+                            <p><label for="cmsg">Mensagem: </label> <textarea name="tmsg" id="cmsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem..."></textarea> </p>
+                        </fieldset>
+                        <fieldset>
+                        <legend id="pedido">  Quero um Google Glass </legend> 
+                            <p><input type="checkbox" name="tped" id="cped" checked>
+                                <label for="cped"> Gostaria de adquirir um Google Glass quando disponível</label> </p>
+                            <p><label for="ccor"> Cor:</label> <input type="color" name="tcor" id="ccor"></p>
+                            <p><label for="cqtd"> Quantidade: </label> <input type="number" name="tqtd" id="cqtd" min="0" ></p>
+                            <p><label for="ctot"> Preço Total: R$ </label> <input type="text" name="ttot" id="ctot" placeholder="Total a pagar" readonly></p>
+                        </fieldset>
+
+            <input type="submit" value="Enviar" id="envio">
+        </form>
+            <footer id="rodape">
+                <p>Copyright &copy; 2021 - by Cristopher Altrão Ruotolo<br>
+                <a href="https://www.facebook.com/cristopher.nai/" target="_blank">Facebook</a> | <a href="https://www.linkedin.com/in/cristopher-altr%C3%A3o-ruotolo-b09416134/" target="_blank" >LinkedIn</a></p>
+            </footer> 
+        </div>
+    </body>
+</html>
